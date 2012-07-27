@@ -18,6 +18,7 @@ function(	tf1			#first TF
     b[genes %in% tflist[[tf2]]] = "target"
     
     if(sum(a == "target") < thresh || sum(b == "target") < thresh || sum((a == "target") & (b == "target")) < thresh){
+        warning(paste("pair ",tf1,"-",tf2," set to NA because of size threshold (thresh=",thresh,")",sep=""))
         return(NA)
     }
     

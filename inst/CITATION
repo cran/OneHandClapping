@@ -1,0 +1,16 @@
+bibentry(bibtype="Article",
+    title="One Hand Clapping: detection of condition-specific transcription factor interactions from genome-wide gene activity data",
+    author=c(person("Sebastian", "Dümcke", role=c("aut","cre")
+            ,email="duemcke@mpipz.mpg.de"),
+    person("Martin","Seizl",role="aut"),
+    person("Stefanie","Etzold",role="aut"),
+    person("Nicole","Pirkl",role="aut"),
+    person(c("Dietmar","E."),"Martin",role="aut"),
+    person("Patrick","Cramer",role="aut"),
+    person("Achim", "Tresch",role="aut",email="tresch@mpipz.mpg.de")
+    ),
+    year="2012",
+    day="25",
+    month="jul",
+    journal="Nucleic Acids Research",
+    doi="10.1093/nar/gks695")

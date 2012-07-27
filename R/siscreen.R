@@ -7,6 +7,17 @@ function(TFtarget  #list describing TF-target relation
                     ,twoints = FALSE
                     ){
 
+    #error checking
+    if(length(intersect(unlist(TFtarget),getParams(IntScore)$genes)) <= 0){
+        stop("No intersect between annotated target genes and gene measurements. Maybe different IDs?")
+    }
+    a = lapply(TFtarget,function(x){intersect(x,getParams(IntScore)$genes)})
+    rem = sapply(a,length) == 0
+    TFtarget = TFtarget[!rem]
+    if(sum(rem > 0)){
+        warning(paste("Removed",sum(rem),"TFs from list, as they had no overlap with any measured genes."))
+    }
+    
 #1) calculate pairwise interaction scores between all TF from TFtarget
     if(twoints){
     }else{

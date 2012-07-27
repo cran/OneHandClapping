@@ -9,9 +9,9 @@ setMethod("show","Screening", function(object){
             }
 })
 
-setMethod("plot","Screening",function(x,y,col=c("blue","grey","yellow"),granularity=39,damp=0,...){
+setMethod("plot","Screening",function(x,y,col=c("blue","grey","yellow"),granularity=39,damp=0,midpoint=0,...){
 
-            a = colorsbreaks(range(x,na.rm=T),maincols=col,granularity=granularity,damp=damp)
+            a = colorsbreaks(range(x,na.rm=T),maincols=col,granularity=granularity,damp=damp,midpoint=midpoint)
             
             if(class(x)[1] == "Screening.validated"){
                 colvec = rep("black",ncol(x))
